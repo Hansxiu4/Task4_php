@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<button onclick="window.location.href='register.html'">Kembali</button>
+<button onclick="window.location.href='index.html'">Kembali</button>
 
 </body>
 </html>

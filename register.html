@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            flex-basis: 30%;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .form-input {
+            flex-basis: 70%;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group label {
+            flex-basis: auto;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .checkbox-group label {
+            flex-basis: auto;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input[type=submit] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type=submit]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Registrasi</h2>
+        <form action="submit.php" method="post">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <div class="form-input">
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="umur">Umur:</label>
+                <div class="form-input">
+                    <input type="text" id="umur" name="umur" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="form-input radio-group">
+                    <div>
+                        <input type="radio" id="gender_laki" name="gender" value="laki-laki" required>
+                        <label for="gender_laki">Laki-laki</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="gender_perempuan" name="gender" value="perempuan" required>
+                        <label for="gender_perempuan">Perempuan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pendidikan">Pendidikan:</label>
+                <div class="form-input">
+                    <select id="pendidikan" name="pendidikan" required>
+                        <option value="S1">S1</option>
+                        <option value="S1">S2</option>
+                        <option value="S1">S3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Hobi:</label>
+                <div class="form-input checkbox-group">
+                    <div>
+                        <input type="checkbox" id="membaca_buku" name="hobi[]" value="membaca_buku">
+                        <label for="membaca_buku">Membaca Buku</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="travelling" name="hobi[]" value="travelling">
+                        <label for="travelling">Travelling</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="olahraga" name="hobi[]" value="olahraga">
+                        <label for="olahraga">Olahraga</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nonton" name="hobi[]" value="nonton">
+                        <label for="nonton">Nonton</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hiking" name="hobi[]" value="hiking">
+                        <label for="hiking">Hiking</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="mancing" name="hobi[]" value="mancing">
+                        <label for="mancing">Mancing</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-input">
+                   <a href="submit.php"> <input type="submit" value="Daftar"></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
